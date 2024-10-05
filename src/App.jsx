@@ -40,6 +40,7 @@ import Finger from './Components/Pages/type/finger';
 import Yellow from './Components/Pages/type/yellow';
 import Red from './Components/Pages/type/red';
 import Chip from './Components/Pages/type/chip';
+import Rost from './Components/Pages/Recipe/rost';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 // Layout component
@@ -94,6 +95,7 @@ const App = () => {
         <Route path="/yellow" element={<Layout showNavbar={true} navbarType="NavbarTYP"><Yellow /></Layout>} />
         <Route path="/red" element={<Layout showNavbar={true} navbarType="NavbarTYP"><Red /></Layout>} />
         <Route path="/chip" element={<Layout showNavbar={true} navbarType="NavbarTYP"><Chip /></Layout>} />
+        <Route path="/rost" element={<Layout showNavbar={true} navbarType="NavbarTYP"><Rost /></Layout>} />
         {/* <Route path="/rost" element={<Layout showNavbar={true} navbarType="NavbarTYP"><Rost /></Layout>} /> */}
       </Routes>
     </Router>
