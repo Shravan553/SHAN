@@ -1,0 +1,455 @@
+/* Hero Section Styles */
+.hero-sections {
+  position: relative;
+  height: 700px; /* Adjust as needed */
+  overflow: hidden;
+  display: flex; /* Flexbox for layout */
+}
+
+.hero-image-container {
+  flex: 1; /* Take half of the space */
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8; /* Adjusted opacity for better effect */
+  filter: grayscale(20%) contrast(1.2); /* Optional: Subtle image adjustment */
+}
+
+.black-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Black overlay */
+  z-index: 1; /* Ensures the overlay is above the image but below the text */
+}
+
+/* Text Section Styling */
+.nutrition-benefits-list {
+  list-style: none; /* Removes default list styling */
+  padding-left: 0;
+}
+
+.nutrition-benefits-list li {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.nutrition-benefits-list li::before {
+  content: '✔'; /* Checkmark symbol */
+  color: #4CAF50; /* Green color for the checkmark */
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.facts-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.facts-title {
+  font-family: 'Poppins', sans-serif; /* Clean, modern font */
+  font-size: 2.5rem; /* Large enough to be noticeable */
+  font-weight: 700; /* Bold for emphasis */
+  text-align: center; /* Center-align for focus */
+  color: #333; /* Dark gray for professionalism */
+  background: linear-gradient(to right, #f7e6d5, #f0c27b); /* Subtle gradient for highlighting */
+  padding: 15px 30px; /* Spacing inside the element */
+  border-radius: 8px; /* Rounded corners for a modern look */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  letter-spacing: 1.5px; /* Space between letters for a polished look */
+  
+  margin-top: 30px; /* Adds space above the title */
+}
+
+.facts-title:hover {
+  background: linear-gradient(to right, #f0c27b, #e98521); /* Reverse the gradient on hover */
+  color: #222; /* Slight color change for interactivity */
+  transform: scale(1.05); /* Slight zoom effect */
+  transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+
+.facts-description {
+  font-size: 1rem; /* Smaller font for description */
+  color: #555; /* Lighter color for the description */
+  line-height: 1.6;
+}
+
+.wave {
+  position: absolute;
+  bottom: -1px; /* Move slightly down to overlap any gap */
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 2; /* Ensure wave is above the image and black overlay */
+}
+
+.hero-overlay {
+  flex: 1; /* Take the other half */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center the text vertically */
+  align-items: center; /* Center the text horizontally */
+  background-color: rgb(250, 246, 246); /* Optional: white background with transparency */
+  position: relative;
+  z-index: 3; /* Ensure text is above both the image and the wave */
+  color: black; /* Text color */
+}
+
+.hero-title {
+  font-size: 2.5rem; /* Adjust size as needed */
+  z-index: 3; /* Text stays on top */
+}
+
+.hero-subtitle {
+  font-size: 1.2rem; /* Adjust size as needed */
+  z-index: 3; /* Text stays on top */
+}
+
+/* Wave SVG styling */
+.svg-wave {
+  display: block;
+  width: 100%;
+  height: 100px; /* Adjust wave height */
+  z-index: 2;
+}
+
+/* Image Slider Styles */
+.image-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0; /* Space around the slider */
+}
+
+.slider-container {
+  display: flex;
+  overflow: hidden; /* Hide overflow for sliding effect */
+  width: 80%; /* Adjust based on your layout */
+}
+
+.slide {
+  flex: 1; /* Allow slides to take equal width */
+  padding: 0 10px; /* Space between slides */
+  text-align: center;
+}
+
+.slide-image {
+  width: 100%;
+  border-radius: 8px; /* Rounded corners for images */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s; /* Smooth scaling effect */
+}
+
+.slide-image:hover {
+  transform: scale(1.05); /* Zoom effect on hover */
+}
+
+.slider-button {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  margin: 0 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for buttons */
+  transition: background-color 0.3s;
+}
+
+.slider-button:hover {
+  background-color: rgba(255, 255, 255, 1); /* Full white on hover */
+}
+
+.potato-nutrition-details-section {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+.nutrition-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.nutrition-text strong {
+  color: #333;
+}
+.nutrition-benefits-list li:hover {
+  background-color: #e6f7e6; /* Light green highlight on hover */
+  border-radius: 5px;
+  padding: 5px;
+}
+
+
+
+
+.nutrition-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.nutrition-image {
+  flex: 1;
+  max-width: 50%;
+  height: auto;
+  border-radius: 10px; /* Optional: Adds rounded corners to the image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for a modern look */
+}
+
+.nutrition-text {
+  flex: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+.nutrition-cards {
+  background: #f9f9f9; /* Light gray background */
+  border: 1px solid #e0e0e0; /* Lighter border for subtle separation */
+  border-radius: 10px;
+  padding: 15px; /* Reduced padding for smaller cards */
+  margin: 10px;
+  width: 100%; /* Ensure image takes up full width of the card */
+  height: 100px; /* Set a fixed height for all images */
+  object-fit: cover; 
+  flex: 0 1 calc(22% - 20px); /* Adjusted to 22% for smaller cards */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Increased shadow for depth */
+  transition: transform 0.3s, box-shadow 0.3s; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow for depth */
+  /* Smooth transition effects */
+}
+
+
+.nutrition-cards:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.nutrition-cards h3 {
+  font-size: 1.6em; /* Slightly larger card headings */
+  color: #4CAF50; /* Green color for headings */
+  margin-bottom: 10px;
+}
+
+.nutrition-cards p {
+  color: #555;
+  line-height: 1.6; /* Improved line height for readability */
+}
+.nutrition-description {
+  font-family: 'Lora', serif; /* A professional, readable serif font */
+  font-size: 1.125rem; /* Slightly larger than typical body text for readability */
+  line-height: 1.8; /* Increased line-height for better readability */
+  color: #333; /* Dark color for good contrast */
+  text-align: justify; /* Justify text for clean alignment */
+  padding: 20px 30px; /* Adequate padding around the text */
+  background-color: #f9f9f9; /* Light background for contrast against text */
+  border-radius: 8px; /* Rounded edges for a modern feel */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Light shadow for depth */
+  max-width: 900px; /* Constrain width for better readability */
+  margin: 20px auto; /* Center the paragraph and add space around */
+  letter-spacing: 0.5px; /* Slight spacing for readability */
+  transition: background-color 0.3s ease; /* Smooth transition effect */
+}
+
+.nutrition-description:hover {
+  background-color: #f0e5d8; /* Slight color change on hover */
+}
+
+.benefits-section {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between buttons */
+}
+
+.benefit-button {
+  padding: 15px 25px;
+  font-size: 1rem;
+  color: white;
+  background-color: #007bff; /* Bootstrap primary color */
+  border: none;
+  border-radius: 5px;
+  text-decoration: none; /* Remove underline */
+  transition: background-color 0.3s;
+}
+
+.benefit-button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+.benefits-section {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between buttons */
+}
+
+.benefit-button {
+  padding: 15px 25px;
+  font-size: 1rem;
+  color: white;
+  background-color: #007bff; /* Bootstrap primary color */
+  border: none;
+  border-radius: 5px;
+  text-decoration: none; /* Remove underline */
+  transition: background-color 0.3s;
+}
+
+.benefit-button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+.read-more-button {
+  background-color: #4CAF50; /* Green */
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 1em;
+  transition: background-color 0.3s, transform 0.3s; /* Smooth hover effects */
+}
+
+.read-more-button:hover {
+  background-color: #45a049; /* Darker green */
+  transform: scale(1.05); /* Slight scaling on hover */
+}
+
+.facts-additional {
+  font-family: 'Roboto', sans-serif; /* Clean and readable font */
+  font-size: 1.25rem; /* Medium-large for emphasis */
+  font-weight: 400; /* Normal weight to balance the text */
+  text-align: center; /* Centered for focus */
+  color: #555; /* Subtle dark gray color for a calm look */
+  background-color: #080808; /* Light background to make it stand out */
+  border-left: 4px solid #ec0404; /* Left border for emphasis */
+  padding: 20px 40px; /* Space around the text */
+  margin: 20px auto; /* Centering with space above and below */
+  max-width: 800px; /* Limit the width for better readability */
+  letter-spacing: 0.5px; /* Slight spacing between characters */
+  line-height: 1.7; /* Improved line spacing for readability */
+  border-radius: 8px; /* Rounded corners for a modern look */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.facts-additional:hover {
+  background-color: #b2f892; /* Background changes on hover */
+  color: #333; /* Slightly darker text for contrast */
+  transform: translateY(-3px); /* Slight lift effect */
+  transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+.benefits-section {
+  text-align: center;
+  padding: 30px;
+}
+
+.benefits-container {
+  display: flex;
+  justify-content: space-between; /* Adjusts the spacing between items */
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  margin: 0 -10px; /* Adjusts margin for child elements */
+}
+
+.benefit-card {
+  flex: 1 1 calc(25% - 20px); /* Adjusts width of each card */
+  margin: 10px; /* Margin around cards */
+  background: #f9f9f9; /* Background color */
+  border-radius: 8px; /* Rounded corners */
+  overflow: hidden; /* Hides overflow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s;
+}
+
+.benefit-card:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.benefit-image {
+  width: 100%; /* Full width */
+  height: 300px; /* Maintain aspect ratio */
+}
+
+.benefit-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px 0;
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  text-decoration: none; /* No underline */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s;
+}
+
+.benefit-button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+.nutrition-cards-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow the cards to wrap */
+  justify-content: space-between; /* Ensure even space between the cards */
+  margin: 30px 0;
+  width: 100%; /* Ensure the container takes up full width */
+}
+
+.nutrition-cards {
+  flex: 0 1 calc(23% - 20px); /* Four cards per row with space */
+  margin-bottom: 20px; /* Space between rows */
+  border: 1px solid #ccc; /* Border to create the box */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Add padding inside the box */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  background-color: #fff; /* White background for the box */
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.nutrition-cards:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Responsive Styles */
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nutrition-cards {
+    flex: 0 1 calc(45% - 20px); /* Two cards per row on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .nutrition-cards {
+    flex: 0 1 100%; /* Stack cards on very small screens */
+    width: 100%; /* Full width on small screens */
+  }
+}
+
