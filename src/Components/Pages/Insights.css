@@ -117,6 +117,7 @@
 /* Left and Right Sections */
 .content-left, .content-right {
     flex: 1;
+    
 }
 
 .content-left {
@@ -133,7 +134,8 @@
     height: auto; /* Maintain aspect ratio */
     border-radius: 8px; /* Rounded corners for a polished look */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    /* Smooth hover effects */
 }
 
 .content-image:hover {
@@ -174,4 +176,46 @@
 
 .content-list li strong {
     color: #212EA0;
+}
+@media (max-width: 768px) {
+    /* For smaller screens like tablets and mobile phones */
+    
+    /* Adjust the image width for mobile */
+    .content-image {
+        width: 100%; /* Make image take up the full width of the container */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    /* Adjust the content-box for better spacing */
+    .content-box {
+        flex-direction: column; /* Stack content vertically */
+        align-items: center; /* Center items */
+        text-align: center;
+    }
+
+    .content-left, .content-right {
+        padding: 0; /* Remove extra padding on mobile for better space usage */
+    }
+
+    /* Adjust content text */
+    .content-title {
+        font-size: 24px; /* Slightly reduce the title font size on mobile */
+    }
+
+    .content-text, .content-info {
+        font-size: 16px; /* Reduce text size for mobile */
+    }
+
+    /* Adjust hero section for smaller screens */
+    .hero-section {
+        height: 300px; /* Reduce height for smaller screens */
+    }
+
+    .hero-title {
+        font-size: 36px; /* Reduce title size */
+    }
+
+    .hero-subtitle {
+        font-size: 18px; /* Reduce subtitle size */
+    }
 }

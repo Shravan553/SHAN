@@ -1,0 +1,51 @@
+/* Rotating Cube Styles */
+.cube-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ensure the cube is centered vertically */
+    margin: 0;
+    background-color: transparent; /* Transparent background to avoid affecting the page */
+}
+
+.cube {
+    position: relative;
+    width: 200px; /* Cube width */
+    height: 200px; /* Cube height */
+    transform-style: preserve-3d;
+    margin: auto;
+    animation: rotateCube 10s infinite linear; /* Apply rotation animation */
+}
+
+/* Cube face styles */
+.face {
+    position: absolute;
+    width: 200px; /* Match the width of the cube */
+    height: 200px; /* Match the height of the cube */
+    background: #0e0c0c; /* Dark gray face color */
+    border: 1px solid #ccc; /* Light border color for better visibility */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em; /* Large font size for better visibility */
+    font-weight: bold;
+    color: white; /* White text for better contrast */
+}
+
+/* Position each face */
+.front  { transform: translateZ(100px); }
+.back   { transform: rotateY(180deg) translateZ(100px); }
+.left   { transform: rotateY(-90deg) translateZ(100px); }
+.right  { transform: rotateY(90deg) translateZ(100px); }
+.top    { transform: rotateX(90deg) translateZ(100px); }
+.bottom { transform: rotateX(-90deg) translateZ(100px); }
+
+/* Keyframe animation for rotating the cube */
+@keyframes rotateCube {
+    0% {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    100% {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}

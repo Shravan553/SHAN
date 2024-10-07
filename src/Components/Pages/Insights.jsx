@@ -1,6 +1,7 @@
 import React from 'react';
 import './Insights.css';
 import NavbarTYP from './Navbar/NavbarTYP.jsx';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 
 const PotatoInsights = () => {
   return (
@@ -9,12 +10,12 @@ const PotatoInsights = () => {
       <NavbarTYP />
 
       {/* Hero Section */}
-      <section className="hero-section">
+      {/* <section className="hero-section">
         <div className="hero-overlay">
           <h1 className="hero-title">Potato Insights</h1>
           <p className="hero-subtitle">Explore various insights about potatoes, their history, varieties, and much more!</p>
         </div>
-      </section>
+      </section> */}
 
       {/* Content Section */}
       <section className='content-section'>
@@ -31,11 +32,14 @@ const PotatoInsights = () => {
                 <li><strong>Yukon Gold:</strong> A buttery-textured potato that's great for all kinds of dishes.</li>
                 <li><strong>Red Potatoes:</strong> Best for soups and salads due to their firm texture.</li>
                 <li><strong>Chipsona:</strong> Specially grown for making crispy chips!</li>
+                
+        <a href="/TypesOfPotatoes"><button class="know-more-btn">Know More</button></a>
               </ul>
             </div>
             <div className='content-right'>
-            <img src="src/assets/pot.png" alt="Types of Potatoes" className='content-image' />
-
+              <Link to="/TypesOfPotatoes">
+                <img src="src/assets/pot.png" alt="Types of Potatoes" className='content-image' />
+              </Link>
               <p className='content-info'>Did you know? Potatoes are a staple food in many countries, used in various dishes from fries to mashed potatoes.</p>
             </div>
           </div>
@@ -43,7 +47,9 @@ const PotatoInsights = () => {
           {/* Box 2: Nutritional Facts */}
           <div className='content-box'>
             <div className='content-left'>
-              <img src="src/assets/nut.png" alt="Nutritional Facts" className='content-image' />
+              <Link to="/nutritional-facts">
+                <img src="src/assets/nut.png" alt="Nutritional Facts" className='content-image' />
+              </Link>
               <p className='content-info'>Potatoes contain more potassium than bananas, making them great for muscle health.</p>
             </div>
             <div className='content-right'>
@@ -54,6 +60,8 @@ const PotatoInsights = () => {
                 <li><strong>Potassium:</strong> Helps regulate blood pressure and muscle function.</li>
                 <li><strong>Fiber:</strong> Keeps your digestive system healthy.</li>
                 <li><strong>Vitamin B6:</strong> Important for brain health and metabolism.</li>
+                
+        <a href="/nutritional-facts"><button class="know-more-btn">Know More</button></a>
               </ul>
             </div>
           </div>
@@ -70,15 +78,21 @@ const PotatoInsights = () => {
               </p>
             </div>
             <div className='content-right'>
-              <img src="src/assets/his.png" alt="Potato History" className='content-image' />
+              <Link to="/potato-history">
+                <img src="src/assets/his.png" alt="Potato History" className='content-image' />
+              </Link>
               <p className='content-info'>Potatoes have shaped history and cultures worldwide.</p>
+              
+        <a href="/potato-history"><button class="know-more-btn">Know More</button></a>
             </div>
           </div>
 
           {/* Box 4: Potato Recipes */}
           <div className='content-box'>
             <div className='content-left'>
-              <img src="src/assets/rec.png" alt="Potato Recipes" className='content-image' />
+              <Link to="/potato-recipes">
+                <img src="src/assets/rec.png" alt="Potato Recipes" className='content-image' />
+              </Link>
               <p className='content-info'>Potatoes can be cooked in a variety of delicious ways.</p>
             </div>
             <div className='content-right'>
@@ -90,6 +104,8 @@ const PotatoInsights = () => {
                 <li><strong>French Fries:</strong> Golden, crispy, and loved worldwide as a snack or side dish.</li>
                 <li><strong>Potato Soup:</strong> A comforting and warm soup perfect for cold days.</li>
                 <li><strong>Roasted Potatoes:</strong> Crispy on the outside and tender on the inside, a great complement to any meal.</li>
+                
+        <a href="/potato-recipes"><button class="know-more-btn">Know More</button></a>
               </ul>
             </div>
           </div>

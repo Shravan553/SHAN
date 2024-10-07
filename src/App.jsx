@@ -43,6 +43,7 @@ import Chip from './Components/Pages/type/chip';
 import Rost from './Components/Pages/Recipe/rost';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Anim from './Components/Pages/circ';
 // Layout component
 const Layout = ({ children, showNavbar, navbarType }) => (
   <>
@@ -59,14 +60,29 @@ const App = () => {
   const [playState, setPlayState] = React.useState(false);
   return (
     <Router>
-      <Routes>
-        {/* Existing Routes */}
-        <Route path="/" element={<Layout showNavbar={true} navbarType="Navbar1"><Hero />
-        <div className="container"><Title subTitle='Our Services Unveiled' title='What We Offer' />
-        <Programs /><About setPlayState={setPlayState} />
-        <Title subTitle='Gallery' title='AGPOTATO' /><Campus /><Title subTitle='Our Vendors' title='Vendor & Customer Feedbacks' /><Testimonials />
-        <Title subTitle='Contact Us' title='Get in Touch' /><Contact />
-        <Footer /></div><VideoPlayer playState={playState} setPlayState={setPlayState} /><MapComponent /></Layout>} />
+    <Routes>
+      {/* Existing Routes */}
+      <Route path="/" element={<Layout showNavbar={true} navbarType="Navbar1">
+        <Hero />
+        <div className="container">
+          <Title subTitle='Our Services Unveiled' title='What We Offer' />
+          <Programs />
+          <Anim /> {/* Add the Anim component here */}
+          <About setPlayState={setPlayState} />
+          <Title title='Agri Business'  />
+          <Title title='Potato Insights'  />
+          <PotatoInsights /> {/* Add the Insights section here */}
+          <Title subTitle='Gallery' title='AGPOTATO' />
+          <Campus />
+          <Title subTitle='Our Vendors' title='Vendor & Customer Feedbacks' />
+          <Testimonials />
+          <Title subTitle='Contact Us' title='Get in Touch' />
+          <Contact />
+          <Footer />
+        </div>
+        <VideoPlayer playState={playState} setPlayState={setPlayState} />
+        <MapComponent />
+      </Layout>} />
         <Route path="/Gallery" element={<Layout showNavbar={false}><Gallery /></Layout>} />
         <Route path="/AboutUS" element={<Layout showNavbar={false}><About1 /></Layout>} />
         
@@ -96,6 +112,7 @@ const App = () => {
         <Route path="/red" element={<Layout showNavbar={true} navbarType="NavbarTYP"><Red /></Layout>} />
         <Route path="/chip" element={<Layout showNavbar={true} navbarType="NavbarTYP"><Chip /></Layout>} />
         <Route path="/rost" element={<Layout showNavbar={true} navbarType="NavbarTYP"><Rost /></Layout>} />
+        <Route path="/circ" element={<Layout showNavbar={true} navbarType="NavbarTYP"><Anim /></Layout>} />
         {/* <Route path="/rost" element={<Layout showNavbar={true} navbarType="NavbarTYP"><Rost /></Layout>} /> */}
       </Routes>
     </Router>
